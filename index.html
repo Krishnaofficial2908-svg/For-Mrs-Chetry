@@ -54,7 +54,7 @@ padding:30px;
 
 .container{
 
-width:900px;
+width:min(900px,95vw);
 max-width:100%;
 
 backdrop-filter:blur(18px);
@@ -93,6 +93,8 @@ font-family:"Great Vibes";
 font-size:70px;
 text-align:center;
 margin-bottom:20px;
+line-height:1.2;
+word-break:keep-all;
 
 }
 
@@ -236,11 +238,92 @@ font-size:50px;
 }
 
 .notice{
-font-size:16px;
+font-size:clamp(16px,2vw,18px);
 }
 
 }
 
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:768px){
+
+body{
+    padding:12px;
+}
+
+.container{
+
+    width:100%;
+    padding:22px;
+    border-radius:20px;
+
+}
+
+h1{
+
+    font-size:56px;
+    line-height:1.15;
+
+}
+
+.subtitle{
+
+    font-size:18px;
+    margin-bottom:25px;
+    line-height:1.6;
+
+}
+
+.notice{
+
+    padding:22px;
+    font-size:17px;
+    line-height:1.8;
+
+}
+
+.notice h2{
+
+    font-size:30px;
+
+}
+
+.signature{
+
+    text-align:center;
+    font-size:40px;
+
+}
+
+button{
+
+    width:100%;
+    padding:18px;
+
+}
+
+#buttonArea{
+
+    flex-direction:column;
+    gap:15px;
+    height:170px !important;
+
+}
+
+#yesBtn,
+#noBtn{
+
+    width:220px;
+
+}
+
+.letter{
+
+    padding:22px;
+
+}
+
+}
 </style>
 
 </head>
@@ -255,7 +338,7 @@ font-size:16px;
 
 <div class="notice">
 
-<h2>📜 Official Notice</h2>
+<h2 style="white-space:nowrap;">📜 Official Notice</h2>
 
 <p>
 
